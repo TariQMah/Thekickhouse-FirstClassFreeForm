@@ -1,0 +1,29 @@
+Request Header:
+GET /Core/Passport/Login/Enter/Notepad.json&s_login=cristi@angelsmith.net
+HTTP/2
+Host: wellnessliving.com
+Accept: */*
+Authorization: 20150518,cra-7plkOyV2vDam,User-Agent,c518dce52a86810fbbc3bd5cfbd0eb8bd7542fcf68bea5a14bc529d2727a4182\r\n
+Date: Sat, 19 Sep 2020 16:36:22 GMT
+User-Agent: Website
+
+Response Header :
+HTTP/2 301
+server: awselb/2.0
+date: Sat, 19 Sep 2020 16:36:22 GMT
+content-type: text/html\r\n
+content-length: 150\r\n
+location: https://www.wellnessliving.com:443/Core/Passport/Login/Enter/Notepad.json&s_login=cristi@angelsmith.net
+
+Response Body :
+<html>\r\n
+
+<head>
+    <title>301 Moved Permanently</title>
+</head>\r\n
+
+<body bgcolor=\"white\">\r\n<center>
+        <h1>301 Moved Permanently</h1>
+    </center>\r\n</body>\r\n
+
+</html>\r\n"

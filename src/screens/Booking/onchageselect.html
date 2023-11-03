@@ -1,0 +1,15 @@
+<script>
+  jQuery(document).ready(function ($) {
+    $(".hero-cta-btn a, .microsite-free-trial-btn a, #footer-cta-btn").click(
+      function () {
+        let approot = document.getElementById("askh_class_schedule");
+        let appselect = approot.querySelector("select#classesGroupSelect");
+        console.log("approot", approot);
+        console.log("appselect", appselect);
+        appselect.value = "kickstart";
+
+        appselect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    );
+  });
+</script>
