@@ -108,6 +108,8 @@ export default class ClassList extends Component {
       });
       if (selectedDate) {
         // console.log("matched classes found");
+        const date = moment(selectedDate, "M/D/YYYY").format("M/D/YYYY");
+
         filteredClassList = [];
         classSessions.forEach((element, index, arr) => {
           /* if (classCount > 3) {
@@ -119,7 +121,7 @@ export default class ClassList extends Component {
 
           if (
             hoursDifference > 3 &&
-            moment(element.dtl_date).format("l") === selectedDate &&
+            moment(element.dtl_date).format("l") === date &&
             element.s_title.toLowerCase().includes(classType)
           ) {
             classCount++;
