@@ -81,13 +81,15 @@ export default class ClassList extends Component {
     if (this.props.isMember) {
       classType = "";
     }
+    const date = moment(selectedDate, "M/D/YYYY").format("M/D/YYYY");
+
     //let classSessions = this.state.classList;
     let filteredClassList = [];
     if (classSessions.length) {
       //console.log("Insier Filtered Classes");
       classSessions.forEach((element) => {
         if (
-          moment(element.dtl_date).format("l") === selectedDate &&
+          moment(element.dtl_date).format("l") === date &&
           element.s_title.toLowerCase().includes(classType)
         ) {
           // console.log("matched classes found");

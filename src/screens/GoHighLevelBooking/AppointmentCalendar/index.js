@@ -81,12 +81,13 @@ export default class GHLAppointmentCalendar extends Component {
     );
     arrDays = arrDays.map((d) => new Date(moment(d)));
     this.setState({ disabledDays: arrDays });
-    console.log(arrDays);
+    // console.log(arrDays);
     return arrDays;
   };
   render() {
     const slots = this.state.slots;
     let self = this;
+    console.log('this.props: ', this.props);
     return (
       <div className="row ghlAppointmentCalendar-component">
         <div className="calendar col-6">
@@ -133,8 +134,17 @@ export default class GHLAppointmentCalendar extends Component {
                             }`}
                             onClick={() => self.updateSelectedSlot(e)}
                           >
+                            {
+                              (console.log(
+                                "tttt",
+                                moment
+                                  .tz(e, self.props?.selectedTimezone?.value)
+                                  .format("LT")
+                              ),
+                              self.props?.selectedTimezone?.value)
+                            }
                             {moment
-                              .tz(e, self.props.selectedTimezone.value)
+                              .tz(e, self.props?.selectedTimezone?.value)
                               .format("LT")}
                           </button>
                         </div>
